@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+
+  <!--
+  <Import Project="version.props" />
+  -->
+  <Import Project="analytics.props" />
+  
+  
+  <PropertyGroup>
+    <Description>A Authentication Server for MicroService Architecture</Description>
+    <Authors>Patrick Evers</Authors>
+    <Owners>Patrick Evers</Owners>
+    <PackageTags>Authentication Server MicroService</PackageTags>
+    <Company>Patrick Evers</Company>
+    <Copyright>Copyright © Patrick Evers 2018-2019</Copyright>
+
+    <PackageIconUrl></PackageIconUrl>
+    <PackageProjectUrl>https://github.com/pmdevers/Security</PackageProjectUrl>
+    <PackageLicense>https://github.com/pmdevers/Security/blob/master/LICENSE.txt</PackageLicense>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/pmdevers/Security</RepositoryUrl>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <VersionSuffix Condition="'$(VersionSuffix)'!='' AND '$(BuildNumber)' != ''">$(VersionSuffix)-$(BuildNumber)</VersionSuffix>
+    <SignAssembly>true</SignAssembly>
+    <DelaySign>false</DelaySign>
+    <AssemblyOriginatorKeyFile>..\..\build\security.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <!-- for code coverage an proper debugging -->
+  <PropertyGroup>
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+
+</Project>
